@@ -1,0 +1,1 @@
+# Gestion_celulares_2025_2

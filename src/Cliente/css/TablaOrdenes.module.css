@@ -1,0 +1,84 @@
+/* Contenedor principal de la tabla */
+.tablaContainer {
+  background: rgba(11, 15, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  overflow-x: auto;
+}
+
+/* Tabla */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Encabezados */
+.tabla thead th {
+  text-align: left;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  color: var(--color-texto);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Filas */
+.tabla tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.25s;
+}
+
+.tabla tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Celdas */
+.tabla td {
+  padding: 0.6rem 1rem;
+  color: var(--color-texto);
+  font-weight: 400;
+}
+
+/* Estados */
+.estado {
+  padding: 0.25rem 0.7rem;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+/* Verde */
+.verde {
+  background: rgba(22, 163, 74, 0.3);
+  border: 1px solid rgba(22, 163, 74, 0.4);
+  color: #16a34a;
+}
+
+/* Amarillo */
+.amarillo {
+  background: rgba(202, 138, 4, 0.3);
+  border: 1px solid rgba(202, 138, 4, 0.4);
+  color: #ca8a04;
+}
+
+/* Rojo */
+.rojo {
+  background: rgba(220, 38, 38, 0.3);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tablaContainer {
+    padding: 1rem;
+  }
+
+  .tabla thead th,
+  .tabla td {
+    padding: 0.5rem 0.7rem;
+  }
+}

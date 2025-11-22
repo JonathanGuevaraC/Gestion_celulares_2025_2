@@ -1,0 +1,131 @@
+.registerPage {
+  width: 100%;
+  background-color: rgba(20, 20, 30, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 180, 255, 0.4);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: slideUp 0.8s ease-in-out;
+  max-width: 400px;
+}
+
+.registerContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* o el fondo que quieras */
+}
+/* Título */
+.title {
+  color: var(--color-acento);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a1f2e;
+  color: var(--color-texto);
+  outline: none;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+  max-width: 100%;     
+  box-sizing: border-box;
+}
+
+.input:focus {
+  box-shadow: 0 0 10px var(--color-secundario);
+}
+
+/* Botón */
+.button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    var(--color-primario),
+    var(--color-secundario)
+  );
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px var(--color-secundario);
+}
+
+/* Mensaje */
+.message {
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--color-acento);
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--color-acento);
+}
+
+/* Popup overlay */
+.popupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup box */
+.popupBox {
+  background: #111827;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px var(--color-secundario);
+  text-align: center;
+}
+
+.popupBox h3 {
+  color: var(--color-acento);
+  margin-bottom: 10px;
+}
+
+/* Animación */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .registerPage {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .button {
+    padding: 0.8rem;
+  }
+}

@@ -1,0 +1,108 @@
+/* Contenedor principal */
+.panelContainer {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  color: var(--color-texto);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* Sidebar izquierda */
+.sidebarContainer {
+  width: 240px; /* igual que el admin */
+  flex-shrink: 0;
+}
+
+/* Contenido principal */
+.contentContainer {
+  flex: 1;
+  margin-left: 24px; /* compensa el sidebar fijo */
+  padding: 2rem;
+
+  overflow-y: auto;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Información fija de la cuenta */
+.infoFija {
+  width: 100%;
+  max-width: 1180px;
+  margin-bottom: 1.5rem;
+  border-radius: 22px;
+
+  animation: fadePop 0.55s ease-out;
+  transition: 0.35s ease;
+}
+
+.infoFija:hover {
+  transform: translateY(-3px);
+}
+
+/* Secciones dinámicas */
+.seccionesDinamicas {
+  width: 100%;
+  max-width: 1180px;
+  border-radius: 22px;
+
+  animation: fadePop 0.55s ease-out;
+  transition: 0.35s ease;
+}
+
+.seccionesDinamicas:hover {
+  transform: translateY(-3px);
+}
+
+/* Animación fadePop */
+@keyframes fadePop {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Scroll elegante */
+.contentContainer::-webkit-scrollbar {
+  width: 10px;
+}
+.contentContainer::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.45);
+  border-radius: 10px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .contentContainer {
+    margin-left: 10%;
+  }
+  .infoFija,
+  .seccionesDinamicas {
+    padding: 1rem;
+  }
+}
+
+/* Celular */
+@media (max-width: 760px) {
+  .panelContainer {
+    flex-direction: column;
+  }
+
+  .infoFija,
+  .seccionesDinamicas {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .sidebarContainer {
+    width: 100%; /* el sidebar ocupa toda la pantalla en móvil */
+  }
+}

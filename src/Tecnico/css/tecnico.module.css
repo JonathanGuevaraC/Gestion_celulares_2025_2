@@ -1,0 +1,79 @@
+/* Contenedor principal */
+.panelContainer {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-texto);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebarContainer {
+  width: 240px; /* igual al admin/cliente */
+  flex-shrink: 0;
+}
+
+/* Contenido principal */
+.contentContainer {
+  flex: 1;
+  margin-left: 240px; /* compensa sidebar fijo */
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Secciones dinámicas */
+.seccionesDinamicas {
+  width: 100%;
+  max-width: 1180px;
+  border-radius: 22px;
+  animation: fadePop 0.55s ease-out;
+  transition: 0.35s ease;
+}
+
+.seccionesDinamicas:hover {
+  transform: translateY(-3px);
+}
+
+/* Animación fadePop */
+@keyframes fadePop {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Scroll elegante */
+.contentContainer::-webkit-scrollbar {
+  width: 10px;
+}
+.contentContainer::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.45);
+  border-radius: 10px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .contentContainer {
+    margin-left: 30%;
+  }
+}
+
+/* Celular */
+@media (max-width: 760px) {
+  .panelContainer {
+    flex-direction: column;
+  }
+  .contentContainer {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}

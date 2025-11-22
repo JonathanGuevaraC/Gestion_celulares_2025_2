@@ -1,0 +1,108 @@
+/* AdminOrdersPanel.css */
+
+/* Contenedor general */
+div {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+}
+
+/* Títulos */
+h1, h2 {
+  color: #333;
+}
+
+/* Botón principal */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Tabla de órdenes */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Filas al pasar el mouse */
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Inputs dentro de la tabla */
+table input, table select, table textarea {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+/* Subpanel de nueva orden */
+div[style*="border: 1px solid #ccc"] {
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+div[style*="border: 1px solid #ccc"] label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+div[style*="border: 1px solid #ccc"] input,
+div[style*="border: 1px solid #ccc"] select,
+div[style*="border: 1px solid #ccc"] textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Botón guardar en subpanel */
+div[style*="border: 1px solid #ccc"] button {
+  margin-top: 15px;
+  background-color: #007bff;
+}
+
+div[style*="border: 1px solid #ccc"] button:hover {
+  background-color: #006ae6;
+}
+
+/* Scroll horizontal para pantallas pequeñas */
+table {
+  display: block;
+  overflow-x: auto;
+}
+
+/* Mensajes de carga */
+div.loading {
+  font-size: 1.1em;
+  color: #666;
+  margin-top: 20px;
+}

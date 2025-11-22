@@ -1,0 +1,145 @@
+.dispositivosContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dispositivosPanel {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(20, 20, 30, 0.55);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 1.8rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 25px rgba(0, 180, 255, 0.15);
+}
+
+.titulo {
+  text-align: left;
+  color: #eaf7ff;
+  letter-spacing: 1px;
+}
+
+.tablaResponsive {
+  overflow-x: auto;
+}
+
+.tablaDispositivos {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(10, 15, 20, 0.25);
+  border-radius: 14px;
+}
+
+.tablaDispositivos th {
+  padding: 12px;
+  text-align: left;
+  background: rgba(0, 180, 255, 0.25);
+  color: #fff;
+  font-weight: 600;
+}
+
+.tablaDispositivos td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sinRegistros {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+}
+
+/* Botones */
+.btn {
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: 600;
+}
+
+.guardar {
+  background: rgba(0, 255, 150, 0.25);
+  color: white;
+}
+.guardar:hover {
+  background: rgba(0, 255, 150, 0.45);
+}
+
+.cancelar {
+  background: rgba(255, 60, 60, 0.25);
+  color: white;
+}
+.cancelar:hover {
+  background: rgba(255, 60, 60, 0.45);
+}
+
+/* Modal - CORREGIDO PARA CENTRAR */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(20, 20, 30, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: #fff;
+  z-index: 1001;
+}
+
+.modal label {
+  display: block;
+  margin-top: 10px;
+}
+
+.modal input,
+.modal select,
+.modal textarea {
+  width: 100%;
+  padding: 6px;
+  border-radius: 8px;
+  margin-top: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 150, 255, 0.3);
+  color: #fff;
+}
+
+.modal textarea {
+  resize: vertical;
+}
+
+/* Estilo select dentro del modal */
+.modal select {
+  width: 100%;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 150, 255, 0.3);
+  color: #fff;
+  appearance: none; /* elimina estilos nativos */
+}
+
+/* Forzar color de opciones */
+.modal select option {
+  background: rgba(20, 20, 30, 0.95);
+  color: #fff;
+}

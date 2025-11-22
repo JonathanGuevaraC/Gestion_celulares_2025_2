@@ -1,0 +1,78 @@
+.repuestosContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.repuestosPanel {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(20, 20, 30, 0.55);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 1.8rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 25px rgba(0, 180, 255, 0.15);
+}
+
+.titulo {
+  text-align: center;
+  color: #eaf7ff;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.tablaResponsive {
+  overflow-x: auto;
+}
+
+.repuestosTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(10, 15, 20, 0.25);
+  border-radius: 14px;
+}
+
+
+.repuestosTable th {
+  padding: 12px;
+  text-align: left;
+  background: rgba(0, 180, 255, 0.25);
+  color: #fff;
+  font-weight: 600;
+}
+
+.repuestosTable td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sinRegistros {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+}
+
+.inputEdit {
+  width: 100%;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,150,255,0.3);
+  color: #fff;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.btn { padding: 6px 12px; border-radius: 10px; border: none; cursor: pointer; transition: 0.25s; font-weight: 600; }
+.editar { background: rgba(0, 150, 255, 0.25); color: #fff; }
+.guardar { background: rgba(0, 255, 150, 0.25); color: #fff; }
+.btnCancelar { background: rgba(255, 60, 60, 0.25); color: #fff; padding: 8px 14px; border-radius: 10px; cursor: pointer; }
+.modalOverlay { position: fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.65); display:flex; justify-content:center; align-items:center; backdrop-filter: blur(4px); }
+.modal { background: rgba(25,25,35,0.9); padding: 2rem; border-radius: 16px; width: 90%; max-width: 400px; color: #fff; box-shadow: 0 0 25px rgba(0,150,255,0.2); }
+.modal input { width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(0,180,255,0.3); color: white; }
+.modalButtons { display:flex; justify-content: space-between; }
+.mensaje { margin-top: 10px; color: #ffb86c; }

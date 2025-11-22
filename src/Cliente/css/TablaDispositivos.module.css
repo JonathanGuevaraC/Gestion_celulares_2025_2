@@ -1,0 +1,57 @@
+/* Archivo: TablaDispositivos.module.css */
+
+/* Contenedor principal de la tabla */
+.tablaContainer {
+  background: rgba(11, 15, 26, 0.6); /* semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  overflow-x: auto; /* scroll horizontal si es necesario */
+}
+
+/* Tabla */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Encabezados */
+.tabla thead th {
+  text-align: left;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  color: var(--color-texto);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Filas */
+.tabla tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.25s;
+}
+
+/* Hover en filas */
+.tabla tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Celdas */
+.tabla td {
+  padding: 0.6rem 1rem;
+  color: var(--color-texto);
+  font-weight: 400;
+}
+
+/* Responsive: reduce padding en móvil */
+@media (max-width: 768px) {
+  .tablaContainer {
+    padding: 1rem;
+  }
+
+  .tabla thead th,
+  .tabla td {
+    padding: 0.5rem 0.7rem;
+  }
+}

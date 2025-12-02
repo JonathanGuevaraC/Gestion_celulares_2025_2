@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../supabase/client";
-import TablaDispositivos from "./Tablas/TablaDispositivos";
+import TablaDispositivos from "./tablas/TablaDispositivos";
 import styles from "./css/tecnico.module.css";
 
 export default function TecnicoDispositivos() {

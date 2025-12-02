@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./css/Sidebar.module.css";
+import styles from "./css/sidebar.module.css";
 import { supabase } from "../supabase/client";
 import { useNavigate } from "react-router-dom";
 
